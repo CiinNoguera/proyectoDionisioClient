@@ -1,0 +1,18 @@
+.cards {
+    background-color: black;
+    height: 180px;
+    width: 180px;
+    margin: 20px;
+}
+
+.cards__title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: chartreuse;
+}
+
+.cards__description {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+    color: azure;
+}

@@ -1,4 +1,3 @@
-import Cards from "./componentes/Cards";
 import Navbar from "./componentes/Navbar";
 import CardsList from "./componentes/CardsList";
 import logo from "./img/logoRectangular.png";

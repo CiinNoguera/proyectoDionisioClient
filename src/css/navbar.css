@@ -1,13 +1,25 @@
-
-.bi-menu-button-wide {
-    background: black;
-    margin-left: 20px;
-    color: azure;
-    font-size: 30px;
+.navbar {
+    background-color: black;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    
 }
 
-.bi-person-bounding-box {
-    background: black;
-    color: azure;
-    font-size: 30px;
+.navbar__btn {
+    color: aliceblue;
+    background-color: black;
+    border-color: black;
+    font-size: 20px;
+    margin-right: auto;
+}
+
+.nabvar__logo {
+    height: 60px;
+    margin-right: 25%;
+    
+
+    
+    
+   
 }

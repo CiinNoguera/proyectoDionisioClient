@@ -1,5 +1,7 @@
-import React from 'react'
-import Cards from './Cards'
+import React from 'react';
+import Cards from './Cards';
+import "../css/cardsList.css";
+
 
 const CardsList = ({ cards }) => {
   return (
