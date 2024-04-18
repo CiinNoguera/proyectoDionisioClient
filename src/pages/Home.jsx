@@ -1,8 +1,8 @@
-import Navbar from "./componentes/Navbar";
-import CardsList from "./componentes/CardsList";
-import logo from "./img/logoRectangular.png";
+import Navbar from "../componentes/Navbar";
+import CardsList from "../componentes/CardsList";
+import logo from "../img/logoRectangular.png";
 
-function App () {
+function Home () {
 
   const cardData = [
     {title:"Pizza indivual", image:"dionisio_01.jpg", description: "Pizza Margarita individual elaborada con una base de salsa de tomate, mozzarella y albahaca fresca."},
@@ -24,4 +24,4 @@ function App () {
   )
 }
 
-export default App
+export default Home
