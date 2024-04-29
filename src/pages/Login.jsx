@@ -17,7 +17,7 @@ const Login = () => {
     <>
        <form onSubmit={(e) => enviarForm(e)}>
         <div className='form'>
-            <h1 className='form__title'>Login</h1>
+            <h1 className='form__title'>¡Bienvenido de nuevo!</h1>
             <input 
                 className='form__item'
                 type="email"
