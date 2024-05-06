@@ -3,21 +3,26 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Error404 from "../pages/Error404";
+import Layout from "../layout/Layout";
 
 export const router = createBrowserRouter( [
     {
         path: '/',
-        element:<Home/>,
-        errorElement:<Error404/>
-    },
-    {
-        path:'/Login',
-        element:<Login/>,
-        errorElement:<Error404/>
-    },
-    {
-        path:'/Register',
-        element: <Register/>,
-        errorElement:<Error404/>
-    }
+        element: <Layout/>,
+        children:[
+            {
+                path: '/',
+                element: <Home/>,
+            },
+            {
+                path:'/Login',
+                element:<Login/>,
+            },        
+            {
+                path:'/Register',
+                element: <Register/>,     
+            }
+        ],
+    }, 
+  
 ]);
