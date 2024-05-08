@@ -1,8 +1,9 @@
 .cards {
+    padding: 10px;
     background-color: black;
-    height: 180px;
-    width: 180px;
+    width: 250px;
     margin: 20px;
+    border: 2px solid rgb(130, 167, 140);   
 }
 
 .cards__title {

@@ -3,3 +3,10 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media (min-width: 540px) {
+    .cardsList {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Pedido from './Pedido';
 import "../css/cards.css";
+import { UserContext } from '../context/UserContext';
 
 const Cards = ({ title, image, description }) => {
+
+  const { user } = useContext(UserContext);
+
   return (
     <div className='cards'>
         <img src={image} alt={title} />
@@ -10,9 +14,11 @@ const Cards = ({ title, image, description }) => {
         <p className='cards__description'>{description}</p>
         <div className='cards__containerPedido'>
           <h1 className='cards__precio'>precio</h1>
-          <div>
+          { user ? (
+            <div>
                <Pedido/>
-          </div>
+            </div>
+          ) : null }
         </div>
         
     </div>

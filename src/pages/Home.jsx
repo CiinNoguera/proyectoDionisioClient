@@ -1,6 +1,5 @@
-import Navbar from "../componentes/Navbar";
 import CardsList from "../componentes/CardsList";
-import logo from "../img/logoRectangular.png";
+
 
 function Home () {
 
@@ -18,7 +17,6 @@ function Home () {
   ]
   return (
     <>
-    <Navbar logo={logo}/>
     <CardsList cards={cardData}/>
     </>
   )
