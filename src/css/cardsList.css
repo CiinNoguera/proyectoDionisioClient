@@ -2,11 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
 }
 
 @media (min-width: 540px) {
     .cardsList {
         justify-content: space-around;
+        flex-direction: row;
         flex-wrap: wrap;
     }
 }

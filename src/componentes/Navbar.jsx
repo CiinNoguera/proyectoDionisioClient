@@ -7,8 +7,11 @@ const Navbar = () => {
     return (
         <>
             <nav className="navbar">
+                   <div className="nabvar__logoContainer">
+                      <img src={logo} alt="Logo Dionisio" className="nabvar__logo" />  
+                   </div>
                    <MenuDropDown/>
-                   <img src={logo} alt="Logo Dionisio" className="nabvar__logo" />  
+                   
             </nav>
         </>
         

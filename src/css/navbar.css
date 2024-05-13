@@ -2,7 +2,7 @@
     background-color: black;
     height: 60px;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     
 }
 
@@ -14,12 +14,10 @@
     margin-right: auto;
 }
 
-.nabvar__logo {
-    height: 60px;
-    margin-right: 25%;
-    
+.nabvar__logoContainer {
+    margin: auto;
+}
 
-    
-    
-   
+.nabvar__logo {
+    height: 60px; 
 }

@@ -1,0 +1,28 @@
+.navbar__btn {
+    height: 60px;
+    border: 1px solid black;
+    color: rgb(54, 55, 54);
+    margin-right: 10px;
+}
+
+.menu__container {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(54, 55, 54) ;
+    padding: 2px;
+    position: absolute;
+    right: 10px;
+}
+
+.menu__item {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: chartreuse;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    border: 1px solid rgb(54, 55, 54);
+    width: 140px;
+    margin: auto;
+}
