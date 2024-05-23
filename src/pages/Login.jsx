@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import "../css/login.css";
 import { loginFetch } from '../api/loginFetch';
+import { UserContext } from '../context/UserContext';
 
 const Login = () => {
+
+    const { setUser } = useContext(UserContext);
+    const navigate = useNavigate();
 
     const [formData, setformData] = useState({
         email:"",
@@ -16,17 +20,27 @@ const [error, setError] = useState(null);
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const res = await loginFetch(formData);
-            console.log(res);
+            const { access } = await loginFetch(formData);
+            if (access) {
+
+             const usuario = {
+                firstaname: "Cin",
+                lastname:"Noguera",
+                email: "ciin@test.com",
+             }   
+                setUser(usuario);
+                navigate('/', { replace:true });
+
+            };
             setError('');
         } catch (error) {
             console.log(error);
-            setError('Error al iniciar sesión');
+            setError('Usuario o contraseña incorrectos');
         }
 }; 
   return (
     <>
-       <form onSubmit={(e) => handleSubmit(e)}>
+       <form onSubmit={handleSubmit}>
         <div className='form'>
             <h1 className='form__title'>¡Bienvenido de nuevo!</h1>
             <input 
@@ -45,6 +59,8 @@ const [error, setError] = useState(null);
                 value={formData.password}
                 onChange={(e) => setformData({...formData, password: e.target.value})}
                  />   
+
+            {error && <p className="alert alert-danger">{error}</p>}     
 
             <button 
             className='form__btn'

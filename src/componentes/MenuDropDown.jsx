@@ -20,7 +20,6 @@ const MenuDropDown = () => {
             <Link to="/Login" className = "menu__item">Iniciar Sesión</Link>
             <Link to="/Register" className = "menu__item">Registro</Link>
             
-            <Link to="/Cart" className = "menu__item">Carrito</Link>
         </div>
        ): null };
     </div>

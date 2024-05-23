@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import "../css/register.css";
 import { registerFetch } from '../api/registerFetch';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
+
+    const navigate = useNavigate();
+
     const [formData, setformData] = useState({
         name:"",
         email:"",
@@ -19,13 +22,14 @@ const Register = () => {
         e.preventDefault();
         try{
             const res = await registerFetch(formData)
-            console.log(res)
-            setError('')
-            setSuccess(true)
+            console.log(res);
+            setError('');
+            setSuccess(true);
+            navigate('/login', { replace: true });
         }catch (err) {
-            console.log("error")
-            setError(error.msg)
-            setSuccess(false)
+            console.log(error);
+            setError(error.msg);
+            setSuccess(false);
         }
 }; 
   return (

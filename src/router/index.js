@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -13,6 +13,7 @@ export const router = createBrowserRouter( [
             {
                 path: '/',
                 element: <Home/>,
+                index: true,
             },
             {
                 path:'/Login',
@@ -25,5 +26,9 @@ export const router = createBrowserRouter( [
         ],
         errorElement: <Error404/>,
     }, 
+    {
+        path: '*',
+        element: <Navigate to='/' replace />
+    }
   
 ]);

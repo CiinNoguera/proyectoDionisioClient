@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import CardsList from "../componentes/CardsList";
+import Pedido from "../componentes/Pedido";
+import { UserContext } from "../context/UserContext";
 
 
 function Home () {
+
+  const { user } = useContext(UserContext);
 
   const cardData = [
     {title:"Pizza indivual", image:"dionisio_01.jpg", description: "Pizza Margarita individual elaborada con una base de salsa de tomate, mozzarella y albahaca fresca."},
@@ -18,6 +23,7 @@ function Home () {
   return (
     <>
     <CardsList cards={cardData}/>
+    {user && <Pedido/>}
     </>
   )
 }

@@ -11,7 +11,9 @@ const UserProvider = ({children}) => {
         setUser,
     };
 
-    return <UserContext.Provider value={data}>{children}</UserContext.Provider>
+    return <UserContext.Provider value={data}>
+        {children}
+        </UserContext.Provider>
 };
 
 export default UserProvider;
