@@ -6,7 +6,7 @@ import { UserContext } from '../context/UserContext';
 
 const Login = () => {
 
-    const { setUser } = useContext(UserContext);
+    const { login } = useContext(UserContext);
     const navigate = useNavigate();
 
     const [formData, setformData] = useState({
@@ -21,18 +21,16 @@ const [error, setError] = useState(null);
         e.preventDefault();
         try{
             const { access } = await loginFetch(formData);
-            if (access) {
+                
+                // guardar oken en localStorage
+                localStorage.setItem('token', access)
+            
+                // ejecuta la funcion login
+                login(access);
 
-             const usuario = {
-                firstaname: "Cin",
-                lastname:"Noguera",
-                email: "ciin@test.com",
-             }   
-                setUser(usuario);
+                // envia al home
                 navigate('/', { replace:true });
-
-            };
-            setError('');
+                setError('');
         } catch (error) {
             console.log(error);
             setError('Usuario o contraseña incorrectos');

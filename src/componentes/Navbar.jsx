@@ -14,6 +14,7 @@ const Navbar = () => {
                    <div className="nabvar__logoContainer">
                       <img src={logo} alt="Logo Dionisio" className="nabvar__logo" />  
                    </div>
+                   
                    {user ? <MenuUser/> : <MenuDropDown/> }
                    
                    

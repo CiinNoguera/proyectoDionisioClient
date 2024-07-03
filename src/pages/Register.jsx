@@ -11,7 +11,7 @@ const Register = () => {
         name:"",
         email:"",
         password:"",
-        role:"admin"
+        role:"user"
     }
 );
 

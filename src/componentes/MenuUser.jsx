@@ -24,6 +24,9 @@ const MenuUser = () => {
         </button>
        {user ? (
         <div className='menu__container'>
+           <h3 className='menu__saludo'>Hola, 
+            <span className='menu__nameUser'> {user.firstName}</span>
+            </h3>
            <Link to="/Cart" className = "menu__item">Carrito</Link>
            <button className="menu__item" onClick={handleLogout}>Cerrar Sesión</button>
         </div>
